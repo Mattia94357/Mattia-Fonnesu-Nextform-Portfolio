@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+
+# Build output and caches
+dist/
+build/
+coverage/
+.cache/
+.vite/
+.vite-temp/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.nyc_output/
+
+# Hosting state and local deployment credentials
+.vercel/
+.netlify/
+
+# Private local configuration and key material
+.npmrc
+.aws/
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Local editor settings
+.idea/
+.vscode/
+
+# Local visual verification artifacts
+tmp/
+test-results/
+playwright-report/
+blob-report/
+
+# Temporary editor and Python helper files
+*.swp
+*.swo
+*~
+__pycache__/
+*.py[cod]

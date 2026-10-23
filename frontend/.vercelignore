@@ -1,0 +1,29 @@
+# Vercel builds from source; dependencies and dist are generated during the build.
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.vite/
+.vite-temp/
+.vercel/
+
+# Local configuration and credentials must not be uploaded by the CLI.
+.env
+.env.*
+!.env.example
+.npmrc
+.aws/
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+.DS_Store
+Thumbs.db
+
+# Local tooling artifacts
+test-results/
+playwright-report/
+blob-report/
