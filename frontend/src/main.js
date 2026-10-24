@@ -1,8 +1,45 @@
 import { Home } from './pages/Home.js';
 import { projects } from './components/SelectedWork.js';
 import './styles/main.css';
+import './styles/responsive.css';
 
 document.querySelector('#app').innerHTML = Home();
+
+// A disclosure menu on phones; the existing desktop navigation stays visible.
+const header = document.querySelector('.header');
+const toggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#main-navigation');
+const phoneViewport = window.matchMedia('(max-width: 760px)');
+
+function setMenu(open, restoreFocus = false) {
+  const wasOpen = toggle.getAttribute('aria-expanded') === 'true';
+  header.classList.toggle('is-menu-open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+  toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  if (!open && wasOpen && restoreFocus) toggle.focus();
+}
+
+toggle.addEventListener('click', () => {
+  setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+});
+navigation.addEventListener('click', event => {
+  if (event.target.closest('a, button')) setMenu(false, true);
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+    event.preventDefault();
+    setMenu(false, true);
+  }
+});
+document.addEventListener('click', event => {
+  if (!header.contains(event.target)) setMenu(false);
+});
+phoneViewport.addEventListener('change', () => {
+  const navHadFocus = navigation.contains(document.activeElement);
+  setMenu(false);
+  if (phoneViewport.matches && navHadFocus) toggle.focus();
+});
+
 
 const dialog = document.querySelector('dialog');
 const content = dialog.querySelector('.dialog-content');

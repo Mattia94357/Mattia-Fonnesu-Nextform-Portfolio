@@ -4,7 +4,7 @@ import heroImage from '../assets/images/nextform-hero.png';
 
 export function Hero() {
   return `<section class="hero" aria-labelledby="hero-title">
-    <img class="hero-art" src="${heroImage}" alt="Sculptural chrome android lit by the cool blue curve of a planetary horizon" fetchpriority="high" width="1942" height="809">
+    <img decoding="async" class="hero-art" src="${heroImage}" alt="Sculptural chrome android lit by the cool blue curve of a planetary horizon" fetchpriority="high" width="1942" height="809">
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="hero-copy">
       ${label('DIGITAL STUDIO')}<span class="label-rule" aria-hidden="true"></span>
