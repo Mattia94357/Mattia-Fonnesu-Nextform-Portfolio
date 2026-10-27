@@ -3,6 +3,9 @@ import { projects } from './components/SelectedWork.js';
 import './styles/main.css';
 import './styles/responsive.css';
 import './styles/hero.css';
+import { initProcess } from './interactions/process.js';
+import { initHeroMotion } from './interactions/heroMotion.js';
+import { initContact } from './interactions/contact.js';
 
 document.querySelector('#app').innerHTML = Home();
 
@@ -65,16 +68,6 @@ dialog.addEventListener('click', (event) => {
 });
 dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
 
-document.addEventListener('submit', (event) => {
-  if (event.target.id !== 'brief-form') return;
-  event.preventDefault();
-  const data = new FormData(event.target);
-  const brief = `NEXTFORM — PROJECT BRIEF\n\nName: ${data.get('name')}\nEmail: ${data.get('email')}\n\nProject\n${data.get('message')}\n`;
-  const url = URL.createObjectURL(new Blob([brief], { type: 'text/plain;charset=utf-8' }));
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = 'nextform-project-brief.txt';
-  link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-  document.querySelector('#brief-status').textContent = 'Your project brief is ready. Keep it for your next conversation with NEXTFORM.';
-});
+initProcess();
+initHeroMotion();
+initContact();

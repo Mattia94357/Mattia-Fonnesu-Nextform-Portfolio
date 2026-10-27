@@ -29,3 +29,12 @@
   .hero .hero-copy { top: auto; width: 56%; }
   .hero .hero-headline { font-size: clamp(56px, 7.5vw, 72px); }
 }
+
+/* Clip only the moving artwork at the hero boundary; no scale or framing change. */
+.hero { overflow: clip; }
+.hero-art { transform: translate3d(0, var(--hero-parallax, 0px), 0); }
+.hero .project-button { gap: 10px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; text-decoration-color: #8b939a; transition: color .2s, text-decoration-color .2s; }
+.hero .project-button .project-link-arrow { display: inline-block; font-size: 16px; letter-spacing: 0; transition: transform .2s; }
+.hero .project-button:hover, .hero .project-button:focus-visible { color: var(--blue); text-decoration-color: var(--blue); }
+@media (hover: hover) { .hero .project-button:hover .project-link-arrow { transform: translateX(3px); } }
+@media (prefers-reduced-motion: reduce) { .hero-art { transform: none; } }

@@ -11,7 +11,7 @@ export function Hero() {
       <p class="hero-description">Websites, products and digital experiences.</p>
       <div class="hero-actions">
         <a class="button button-light" href="#work">VIEW WORK ${arrow}</a>
-        <a class="project-button" href="#contact"><span class="play-icon" aria-hidden="true">▶</span>START A PROJECT</a>
+        <a class="project-button" href="#contact">START A PROJECT <span class="project-link-arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="hero-index" aria-hidden="true"><span class="index-line"></span><span class="active">01</span><span>02</span><span>03</span></div>

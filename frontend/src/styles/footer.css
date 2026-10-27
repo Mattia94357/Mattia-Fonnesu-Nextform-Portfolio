@@ -1,0 +1,18 @@
+.footer.studio-footer { display: block; padding: 52px 3.8% 24px; color: var(--muted); }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 28px 56px; padding-bottom: 42px; }
+.studio-footer .footer-brand .wordmark { display: inline-flex; align-items: center; min-height: 44px; font-size: 21px; color: #f2f2ee; }
+.footer-brand p { margin-top: 5px; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; }
+.footer-navigation, .footer-socials { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.footer-top nav a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 12px; }
+.footer-top a:hover, .footer-bottom a:hover { color: var(--blue); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+.footer-bottom p { font-size: 11px; line-height: 1.8; }
+.footer-bottom p span { margin-left: 14px; }
+.footer-bottom a { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; font-size: 9px; letter-spacing: .18em; }
+@media (max-width: 760px) {
+  .footer.studio-footer { padding: 36px 6% 20px; }
+  .footer-top { gap: 20px; padding-bottom: 28px; }
+  .footer-brand { width: 100%; }
+  .footer-navigation, .footer-socials { gap: 0 22px; }
+  .footer-bottom p span { display: block; margin: 0; }
+}
