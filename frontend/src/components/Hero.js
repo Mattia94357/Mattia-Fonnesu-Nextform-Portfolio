@@ -1,5 +1,4 @@
 import { arrow, label } from './icons.js';
-import { Logo } from './Logo.js';
 import heroImage from '../assets/images/nextform-hero.png';
 
 export function Hero() {
@@ -8,12 +7,11 @@ export function Hero() {
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="hero-copy">
       ${label('DIGITAL STUDIO')}<span class="label-rule" aria-hidden="true"></span>
-      <h1 id="hero-title" aria-label="NEXTFORM">${Logo({ size: 'large' })}</h1>
-      <p class="tagline">Designing what's next.</p>
+      <h1 class="hero-headline" id="hero-title"><span>Building</span> <span>what's next.</span></h1>
       <p class="hero-description">Websites, products and digital experiences.</p>
       <div class="hero-actions">
         <a class="button button-light" href="#work">VIEW WORK ${arrow}</a>
-        <button class="project-button" data-dialog="contact"><span class="play-icon" aria-hidden="true">▶</span>START A PROJECT</button>
+        <a class="project-button" href="#contact"><span class="play-icon" aria-hidden="true">▶</span>START A PROJECT</a>
       </div>
     </div>
     <div class="hero-index" aria-hidden="true"><span class="index-line"></span><span class="active">01</span><span>02</span><span>03</span></div>

@@ -1,0 +1,31 @@
+/* Editorial focal point; preserve the existing artwork, grid and UI details. */
+.hero .hero-copy { top: 22.5%; width: 55%; }
+.hero .hero-headline {
+  margin-top: 24px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(72px, 7.6vw, 144px);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.055em;
+  white-space: normal;
+}
+.hero .hero-headline > span { display: block; white-space: nowrap; }
+.hero .hero-description { margin-top: 20px; }
+.hero .hero-actions { margin-top: 28px; }
+
+@media (max-width: 1100px) {
+  .hero .hero-copy { top: clamp(132px, 16vw, 164px); width: 56%; }
+  .hero .hero-headline { font-size: clamp(68px, 8.5vw, 92px); margin-top: 20px; }
+  .hero .hero-description { margin-top: 16px; }
+}
+
+@media (max-width: 760px) {
+  .hero .hero-copy { top: auto; width: 100%; }
+  .hero .hero-headline { font-size: clamp(54px, 13.5vw, 72px); margin-top: 20px; }
+  .hero .hero-actions { margin-top: 24px; }
+}
+
+@media (min-width: 600px) and (max-width: 1100px) and (max-height: 600px) {
+  .hero .hero-copy { top: auto; width: 56%; }
+  .hero .hero-headline { font-size: clamp(56px, 7.5vw, 72px); }
+}

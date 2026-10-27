@@ -2,6 +2,7 @@ import { Home } from './pages/Home.js';
 import { projects } from './components/SelectedWork.js';
 import './styles/main.css';
 import './styles/responsive.css';
+import './styles/hero.css';
 
 document.querySelector('#app').innerHTML = Home();
 
@@ -43,10 +44,6 @@ phoneViewport.addEventListener('change', () => {
 
 const dialog = document.querySelector('dialog');
 const content = dialog.querySelector('.dialog-content');
-const panels = {
-  process: `<span class="eyebrow">OUR PROCESS</span><h2 id="dialog-title">From idea to experience.</h2><ol class="process-list"><li><span>01</span>Strategy</li><li><span>02</span>Design</li><li><span>03</span>Development</li></ol>`,
-  contact: `<span class="eyebrow">START A PROJECT</span><h2 id="dialog-title">What's next?</h2><p>Shape your next website, product or digital experience.</p><form id="brief-form"><label for="brief-name">Your name</label><input id="brief-name" name="name" autocomplete="name" required maxlength="120"><label for="brief-email">Email address</label><input id="brief-email" name="email" type="email" autocomplete="email" required maxlength="254"><label for="brief-message">Tell us about your project</label><textarea id="brief-message" name="message" required rows="4" maxlength="5000"></textarea><button class="button button-light" type="submit">DOWNLOAD PROJECT BRIEF ↗</button><p class="form-note">Save your brief to share when you're ready.</p><p id="brief-status" role="status"></p></form>`,
-};
 
 function openDialog(html) {
   content.innerHTML = html;
@@ -55,13 +52,10 @@ function openDialog(html) {
 }
 
 document.addEventListener('click', (event) => {
-  const trigger = event.target.closest('[data-dialog], [data-project]');
+  const trigger = event.target.closest('[data-project]');
   if (!trigger) return;
-  if (trigger.dataset.dialog) openDialog(panels[trigger.dataset.dialog]);
-  else {
-    const project = projects.find(({ id }) => id === trigger.dataset.project);
-    openDialog(`<img class="dialog-project-image" src="${project.image}" alt="${project.alt}"><span class="eyebrow">${project.tags.join(' · ')}${project.status && !project.statusInImage ? ` · ${project.status}` : ''}</span><h2 id="dialog-title">${project.title}</h2>`);
-  }
+  const project = projects.find(({ id }) => id === trigger.dataset.project);
+  openDialog(`<img class="dialog-project-image" src="${project.image}" alt="${project.alt}"><span class="eyebrow">${project.tags.join(' · ')}${project.status && !project.statusInImage ? ` · ${project.status}` : ''}</span><h2 id="dialog-title">${project.title}</h2>`);
 });
 
 dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());

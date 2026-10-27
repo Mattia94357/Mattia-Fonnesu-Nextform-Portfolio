@@ -1,0 +1,27 @@
+.studio-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  align-items: start;
+  gap: clamp(32px, 5vw, 80px);
+  padding: clamp(64px, 7vw, 112px) 3.8%;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 24px;
+}
+.studio-section h2 {
+  margin: 24px 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+.studio-intro p { max-width: 42ch; margin-top: 20px; color: var(--muted); line-height: 1.7; }
+.studio-section .process-list { margin: 0; }
+.studio-section #brief-form { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .studio-section { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
+@media (max-width: 760px) {
+  .studio-section { padding-inline: 6%; }
+}
