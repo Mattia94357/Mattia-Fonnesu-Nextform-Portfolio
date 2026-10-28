@@ -1,12 +1,13 @@
 import { arrow, label } from './icons.js';
 import { ProjectCard } from './ProjectCard.js';
+import { caseStudies } from '../data/caseStudies.js';
 import joker from '../../assets/d43e5652-4e83-4d72-9dfc-ba38230015cf.png';
 import corte from '../../assets/sa corte antiga.png';
 import join from '../../assets/join.png';
 
 export const projects = [
-  { id: 'joker-tattoo', title: 'JOKER TATTOO', tags: ['WEBSITE', 'BRAND'], image: joker, alt: 'Cinematic tattoo session in a dark studio with cool-blue lighting' },
-  { id: 'sa-corte-antiga', title: 'SA CORTE ANTIGA', tags: ['WEBSITE', 'BOOKING PLATFORM'], image: corte, alt: 'Moonlit Nebida coastline and a warmly lit Sardinian stone terrace' },
+  { id: 'joker-tattoo', caseStudy: caseStudies['joker-tattoo'], title: 'JOKER TATTOO', tags: ['WEBSITE', 'BRAND'], image: joker, alt: 'Cinematic tattoo session in a dark studio with cool-blue lighting' },
+  { id: 'sa-corte-antiga', caseStudy: caseStudies['sa-corte-antiga'], title: 'SA CORTE ANTIGA', tags: ['WEBSITE', 'BOOKING PLATFORM'], image: corte, alt: 'Moonlit Nebida coastline and a warmly lit Sardinian stone terrace' },
   { id: 'join', title: 'JOIN', tags: ['APP', 'PRODUCT'], image: join, status: 'COMING SOON', statusInImage: true, alt: 'JOIN mobile app preview with social activities and a Coming Soon treatment' },
 ];
 

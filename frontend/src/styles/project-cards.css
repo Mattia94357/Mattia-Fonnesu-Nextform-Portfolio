@@ -8,3 +8,7 @@
 .project-card .project-preview--join > img {object-position:right center}
 .project-status {position:absolute;top:14px;right:16px;display:inline-flex;align-items:center;gap:8px;min-height:25px;padding:0 9px;border:1px solid #adbfcb55;background:#091015e6;color:#d5e2e9;font-size:8px;line-height:1.4;letter-spacing:.18em}
 .project-status::before {content:'';width:4px;height:4px;border-radius:50%;background:#aac9d9}
+
+/* A discreet action in the existing top-right corner; card geometry stays fixed. */
+.case-study-action { position: absolute; top: 12px; right: 12px; padding: 6px 8px; background: #060b0fcc; color: #d5e2e9; font-size: 8px; line-height: 1.5; letter-spacing: .14em; }
+.project-card:hover .case-study-action, .project-card:focus-visible .case-study-action { color: var(--blue); }

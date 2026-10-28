@@ -1,5 +1,6 @@
 import { Home } from './pages/Home.js';
 import { projects } from './components/SelectedWork.js';
+import { ProjectDetails } from './components/CaseStudy.js';
 import './styles/main.css';
 import './styles/responsive.css';
 import './styles/hero.css';
@@ -48,25 +49,50 @@ phoneViewport.addEventListener('change', () => {
 const dialog = document.querySelector('dialog');
 const content = dialog.querySelector('.dialog-content');
 
-function openDialog(html) {
-  content.innerHTML = html;
+let projectOpener = null;
+
+function openProject(project, trigger) {
+  projectOpener = trigger;
+  dialog.classList.toggle('case-study-dialog', Boolean(project.caseStudy));
+  content.innerHTML = ProjectDetails(project);
   dialog.showModal();
+  dialog.scrollTop = 0;
   document.body.classList.add('dialog-open');
+  dialog.querySelector('.dialog-close').focus({ preventScroll: true });
+  content.scrollTop = 0;
 }
 
 document.addEventListener('click', (event) => {
   const trigger = event.target.closest('[data-project]');
   if (!trigger) return;
   const project = projects.find(({ id }) => id === trigger.dataset.project);
-  openDialog(`<img class="dialog-project-image" src="${project.image}" alt="${project.alt}"><span class="eyebrow">${project.tags.join(' · ')}${project.status && !project.statusInImage ? ` · ${project.status}` : ''}</span><h2 id="dialog-title">${project.title}</h2>`);
+  if (project) openProject(project, trigger);
 });
 
 dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+
+// Keep keyboard focus within the modal's controls, including at browser-chrome boundaries.
+dialog.addEventListener('keydown', event => {
+  if (event.key !== 'Tab') return;
+  const controls = [...dialog.querySelectorAll('button:not([disabled]), a[href], [tabindex="0"]')]
+    .filter(element => element.getClientRects().length);
+  const first = controls[0];
+  const last = controls[controls.length - 1];
+  if ((event.shiftKey && document.activeElement === first) ||
+      (!event.shiftKey && document.activeElement === last)) {
+    event.preventDefault();
+    (event.shiftKey ? last : first).focus({ preventScroll: true });
+  }
+});
 dialog.addEventListener('click', (event) => {
   const rect = dialog.getBoundingClientRect();
   if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
 });
-dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+dialog.addEventListener('close', () => {
+  document.body.classList.remove('dialog-open');
+  if (projectOpener?.isConnected) projectOpener.focus({ preventScroll: true });
+  projectOpener = null;
+});
 
 initProcess();
 initHeroMotion();

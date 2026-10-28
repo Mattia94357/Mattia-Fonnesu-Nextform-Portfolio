@@ -123,6 +123,8 @@
 }
 
 @media (pointer: coarse) {
+  /* Enlarge the tablet logo hit area without resizing the approved wordmark. */
+  .header .wordmark { display: inline-flex; align-items: center; min-height: 44px; }
   .header nav a, .header nav button { min-height: 44px; min-width: 44px; }
   .button, .project-button { min-height: 44px; }
 }
