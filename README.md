@@ -86,7 +86,7 @@ Import the GitHub repository as a new Vercel project and set:
 
 Build and output paths are relative to `frontend/`. The Root Directory is a Vercel project setting; no root-level build script or backend deployment is required. All imported images are inside `frontend/`, so access to source files outside the Root Directory is unnecessary.
 
-After deployment, verify the homepage, loaded images, `#work` link, project previews, and contact brief download on the assigned URL.
+After deployment, verify the homepage, loaded images, `#work` link, project previews, and contact email links on the assigned URL.
 
 ### Routing
 
@@ -100,7 +100,7 @@ This is a single static homepage with fragment links (`#work`, `#projects`, `#ma
 
 Neither the frontend nor backend currently requires environment variables, API keys, or an API server. No `.env.example` is needed until configuration exists. Future example files should contain variable names with empty values, never real credentials. Browser-exposed `VITE_*` values must not contain secrets.
 
-The contact form currently downloads a project brief locally. It does not send email or store submissions; an email/service integration remains future work. See `backend/README.md` before adding backend functionality.
+The contact section and footer use native email links from the shared configuration in `frontend/src/config/site.js`. The LET'S TALK action opens the visitor's email application; visitors review and send their message there. The website does not send emails automatically or store submissions. The previous project-brief form has been removed. Unconfigured social destinations remain hidden. See `backend/README.md` before adding backend functionality.
 
 ## Assets and external resources
 

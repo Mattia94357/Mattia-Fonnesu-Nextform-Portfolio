@@ -16,3 +16,5 @@
   .footer-navigation, .footer-socials { gap: 0 22px; }
   .footer-bottom p span { display: block; margin: 0; }
 }
+
+.footer-brand .footer-email { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; margin-top: 8px; font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }

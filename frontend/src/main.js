@@ -6,7 +6,6 @@ import './styles/responsive.css';
 import './styles/hero.css';
 import { initProcess } from './interactions/process.js';
 import { initHeroMotion } from './interactions/heroMotion.js';
-import { initContact } from './interactions/contact.js';
 
 document.querySelector('#app').innerHTML = Home();
 
@@ -96,4 +95,3 @@ dialog.addEventListener('close', () => {
 
 initProcess();
 initHeroMotion();
-initContact();

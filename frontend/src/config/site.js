@@ -1,9 +1,9 @@
-// Public contact details only. Replace the samples, then enable each destination.
-// Disabled samples are never rendered as links or used to deliver enquiries.
+// Shared public contact destinations. Enable links only after adding real details.
+// Disabled or unconfigured destinations are never rendered.
 export const siteConfig = {
   contact: {
-    email: 'hello@example.com',
-    emailEnabled: false,
+    email: 'nextformdigital@gmail.com',
+    emailEnabled: true,
     whatsappNumber: '+1 202-555-0100',
     whatsappEnabled: false,
   },
@@ -14,6 +14,11 @@ export function enquiryEmail() {
   const { email, emailEnabled } = siteConfig.contact;
   return emailEnabled && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
     && !/@(?:.*\.)?example\.(com|org|net)$/i.test(email) ? email : null;
+}
+
+export function enquiryMailto() {
+  const email = enquiryEmail();
+  return email ? 'mailto:' + email : null;
 }
 
 export function socialLinks() {
