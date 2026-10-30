@@ -4,9 +4,9 @@ The project cards use only the owner's approved cinematic images in `frontend/as
 
 - Joker Tattoo: `assets/d43e5652-4e83-4d72-9dfc-ba38230015cf.png` (tattoo session).
 - Sa Corte Antiga: `assets/sa corte antiga.png` (Nebida coast at night).
-- JOIN: `assets/join.png` (app composition with an embedded COMING SOON label).
+- JOIN: `assets/JOIN2.png` (approved gold app composition, including its JOIN wordmark).
 
-Replace these files in place to update the cards. JOIN's `statusInImage` flag prevents a duplicate HTML badge while retaining COMING SOON in its accessible name. The old screenshots, mobile overlay, and illustrative assets are no longer imported by the cards. All images are bundled locally by Vite.
+Replace these files in place to update the cards. JOIN uses one HTML COMING SOON badge because the new image does not include that status. Its `titleInImage` flag hides the duplicate HTML title visually while preserving the project name for assistive technology. The previous `assets/join.png` remains in the repository but is no longer imported. The old screenshots, mobile overlay, and illustrative assets are no longer imported by the cards. All images are bundled locally by Vite.
 
 The hero remains unchanged. The original generated assets and their historical prompts are documented below; the three original card images are retained on disk but unused.
 

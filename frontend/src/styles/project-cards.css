@@ -5,10 +5,16 @@
 .preview-grade {position:absolute;inset:0;pointer-events:none}
 .project-preview--joker-tattoo .preview-grade {background:linear-gradient(90deg,#08070720,transparent 70%)}
 .project-preview--sa-corte-antiga .preview-grade {background:linear-gradient(180deg,#34231315,transparent 55%,#0b090630)}
-.project-card .project-preview--join > img {object-position:right center}
-.project-status {position:absolute;top:14px;right:16px;display:inline-flex;align-items:center;gap:8px;min-height:25px;padding:0 9px;border:1px solid #adbfcb55;background:#091015e6;color:#d5e2e9;font-size:8px;line-height:1.4;letter-spacing:.18em}
-.project-status::before {content:'';width:4px;height:4px;border-radius:50%;background:#aac9d9}
+.project-card .project-preview--join > img {object-position:center center}
+.project-status {position:absolute;top:14px;right:16px;display:inline-flex;align-items:center;gap:8px;min-height:25px;padding:0 9px;border:1px solid var(--accent-border-strong);background:var(--accent-plate);color:var(--gold-highlight);font-size:8px;line-height:1.4;letter-spacing:.18em}
+.project-status::before {content:'';width:4px;height:4px;border-radius:50%;background:var(--gold-champagne)}
 
 /* A discreet action in the existing top-right corner; card geometry stays fixed. */
-.case-study-action { position: absolute; top: 12px; right: 12px; padding: 6px 8px; background: #060b0fcc; color: #d5e2e9; font-size: 8px; line-height: 1.5; letter-spacing: .14em; }
-.project-card:hover .case-study-action, .project-card:focus-visible .case-study-action { color: var(--blue); }
+.case-study-action { position: absolute; top: 12px; right: 12px; padding: 6px 8px; background: var(--accent-plate); color: var(--gold-highlight); font-size: 8px; line-height: 1.5; letter-spacing: .14em; }
+.project-card:hover .case-study-action, .project-card:focus-visible .case-study-action { color: var(--accent); }
+
+/* Separate links keep native website navigation outside the case-study button. */
+.project-item { min-width: 0; }
+.project-visit-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 6px; font-size: 9px; font-weight: 500; line-height: 1.5; letter-spacing: .15em; color: #b7c0c6; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; transition: color .2s; }
+.project-visit-link svg { width: 13px; height: 13px; }
+.project-visit-link:hover, .project-visit-link:focus-visible { color: var(--accent); }

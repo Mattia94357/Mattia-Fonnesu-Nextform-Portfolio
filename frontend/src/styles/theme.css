@@ -1,0 +1,21 @@
+/* Shared gold UI tokens. Approved bitmap artwork and the brand mark stay untouched. */
+:root {
+  --gold-primary: #c9a76a;
+  --gold-champagne: #d8bc82;
+  --gold-highlight: #e8d5a8;
+  --gold-antique: #927348;
+  --gold-dark: #6e5433;
+  --gold-rgb: 201, 167, 106;
+  --accent: var(--gold-primary);
+  --accent-label: var(--gold-champagne);
+  --focus-ring: var(--gold-champagne);
+  --accent-line: rgba(var(--gold-rgb), .16);
+  --accent-grid: rgba(var(--gold-rgb), .055);
+  --accent-border: rgba(var(--gold-rgb), .32);
+  --accent-border-strong: rgba(var(--gold-rgb), .5);
+  --accent-glow: rgba(var(--gold-rgb), .3);
+  --accent-wash: rgba(var(--gold-rgb), .12);
+  --accent-plate: rgba(11, 10, 8, .9);
+  --hero-warmth: radial-gradient(ellipse at 68% 70%, rgba(var(--gold-rgb), .045), transparent 64%);
+  --button-gold: linear-gradient(120deg, var(--gold-highlight), var(--gold-champagne) 48%, var(--gold-primary));
+}

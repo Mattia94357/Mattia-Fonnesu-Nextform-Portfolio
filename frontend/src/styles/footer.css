@@ -4,7 +4,7 @@
 .footer-brand p { margin-top: 5px; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; }
 .footer-navigation, .footer-socials { display: flex; flex-wrap: wrap; gap: 0 24px; }
 .footer-top nav a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 12px; }
-.footer-top a:hover, .footer-bottom a:hover { color: var(--blue); }
+.footer-top a:hover, .footer-bottom a:hover { color: var(--accent); }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; border-top: 1px solid var(--line); padding-top: 20px; }
 .footer-bottom p { font-size: 11px; line-height: 1.8; }
 .footer-bottom p span { margin-left: 14px; }
