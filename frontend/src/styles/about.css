@@ -47,7 +47,7 @@
 
 .about-services li {
   padding: 4px 0;
-  color: #c0c7c9;
+  color: var(--text-detail);
   font-size: 10px;
   letter-spacing: .18em;
   line-height: 1.6;

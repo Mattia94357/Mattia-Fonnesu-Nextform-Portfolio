@@ -1,21 +1,34 @@
-/* Shared gold UI tokens. Approved bitmap artwork and the brand mark stay untouched. */
+/* Monochrome interface palette. Photographs, artwork and palm paths stay unchanged. */
 :root {
-  --gold-primary: #c9a76a;
-  --gold-champagne: #d8bc82;
-  --gold-highlight: #e8d5a8;
-  --gold-antique: #927348;
-  --gold-dark: #6e5433;
-  --gold-rgb: 201, 167, 106;
-  --accent: var(--gold-primary);
-  --accent-label: var(--gold-champagne);
-  --focus-ring: var(--gold-champagne);
-  --accent-line: rgba(var(--gold-rgb), .16);
-  --accent-grid: rgba(var(--gold-rgb), .055);
-  --accent-border: rgba(var(--gold-rgb), .32);
-  --accent-border-strong: rgba(var(--gold-rgb), .5);
-  --accent-glow: rgba(var(--gold-rgb), .3);
-  --accent-wash: rgba(var(--gold-rgb), .12);
-  --accent-plate: rgba(11, 10, 8, .9);
-  --hero-warmth: radial-gradient(ellipse at 68% 70%, rgba(var(--gold-rgb), .045), transparent 64%);
-  --button-gold: linear-gradient(120deg, var(--gold-highlight), var(--gold-champagne) 48%, var(--gold-primary));
+  --surface-primary: #08090a;
+  --surface-secondary: #111214;
+  --text-primary: #f5f5f3;
+  --text-secondary: #a5a5a5;
+  --text-muted: #8c8c8c;
+  --text-detail: #c5c5c5;
+  --accent: #ffffff;
+  --accent-label: #d0d0d0;
+  --accent-subtle: #929292;
+  --focus-ring: #ffffff;
+  --accent-line: #292929;
+  --accent-border: #3d3d3d;
+  --accent-border-strong: #666666;
+  --accent-glow: rgba(255, 255, 255, .18);
+  --accent-wash: rgba(255, 255, 255, .08);
+  --accent-plate: rgba(17, 17, 17, .9);
+  --hero-ambient: radial-gradient(ellipse at 68% 70%, rgba(255, 255, 255, .045), transparent 64%);
+  --button-highlight: linear-gradient(120deg, #ffffff, #e0e0e0 48%, #bdbdbd);
+  --logo-ring: #dddddd;
+  --logo-fill-light: #505050;
+  --logo-fill-mid: #303030;
+  --logo-fill-dark: #121212;
+  --logo-light: #f5f5f5;
+  --logo-light-soft: #cecece;
+  --logo-glint: #a5a5a580;
+  --logo-glint-glow: #b0b0b090;
+  --logo-glow-core: #f5f5f5bf;
+  --logo-glow-outer: #bdbdbd60;
+  --logo-glow-small-core: #f5f5f580;
+  --logo-glow-small-outer: #bdbdbd35;
+  --logo-silhouette: #070707;
 }

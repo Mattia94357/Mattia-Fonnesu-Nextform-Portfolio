@@ -11,11 +11,11 @@
   width: .76em;
   height: .76em;
   margin: 0 .12em 0 .02em;
-  border: .012em solid #b8dfff;
+  border: .012em solid var(--logo-ring);
   border-radius: 50%;
-  background: radial-gradient(ellipse at 62% 50%, #395563 0%, #213440 44%, #0a141c 78%);
+  background: radial-gradient(ellipse at 62% 50%, var(--logo-fill-light) 0%, var(--logo-fill-mid) 44%, var(--logo-fill-dark) 78%);
   /* 25% less light than the original eclipse; ring dimensions stay fixed. */
-  box-shadow: .025em 0 .025em #e8f7ffbf, .055em 0 .11em #4db8ff60;
+  box-shadow: .025em 0 .025em var(--logo-glow-core), .055em 0 .11em var(--logo-glow-outer);
   isolation: isolate;
 }
 
@@ -24,7 +24,7 @@
   position: absolute;
   inset: -.012em;
   border-radius: inherit;
-  background: radial-gradient(ellipse at 98% 42%, #f1fbff 0%, #a8e1ff 2%, transparent 13%);
+  background: radial-gradient(ellipse at 98% 42%, var(--logo-light) 0%, var(--logo-light-soft) 2%, transparent 13%);
   opacity: .75;
   pointer-events: none;
 }
@@ -37,8 +37,8 @@
   width: 154%;
   height: .009em;
   transform: rotate(-18deg);
-  background: linear-gradient(90deg, transparent, #64b4eb80 62%, #e7f6ff 80%, transparent);
-  box-shadow: 0 0 .045em #6dbdff90;
+  background: linear-gradient(90deg, transparent, var(--logo-glint) 62%, var(--logo-light) 80%, transparent);
+  box-shadow: 0 0 .045em var(--logo-glint-glow);
   opacity: .75;
   z-index: -1;
   pointer-events: none;
@@ -52,7 +52,7 @@
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
-  color: #050b10;
+  color: var(--logo-silhouette);
 }
 
 .brand-palm {
@@ -62,7 +62,7 @@
 }
 
 .brand-logo--small .brand-eclipse {
-  box-shadow: .02em 0 .02em #e8f7ff80, .035em 0 .075em #4db8ff35;
+  box-shadow: .02em 0 .02em var(--logo-glow-small-core), .035em 0 .075em var(--logo-glow-small-outer);
 }
 
 .brand-logo--small .brand-eclipse::before,

@@ -1,6 +1,6 @@
 .footer.studio-footer { display: block; padding: 52px 3.8% 24px; color: var(--muted); }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 28px 56px; padding-bottom: 42px; }
-.studio-footer .footer-brand .wordmark { display: inline-flex; align-items: center; min-height: 44px; font-size: 21px; color: #f2f2ee; }
+.studio-footer .footer-brand .wordmark { display: inline-flex; align-items: center; min-height: 44px; font-size: 21px; color: var(--text-primary); }
 .footer-brand p { margin-top: 5px; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; }
 .footer-navigation, .footer-socials { display: flex; flex-wrap: wrap; gap: 0 24px; }
 .footer-top nav a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 12px; }
