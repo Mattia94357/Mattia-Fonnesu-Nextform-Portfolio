@@ -4,6 +4,8 @@ import { ProjectDetails } from './components/CaseStudy.js';
 import './styles/main.css';
 import './styles/responsive.css';
 import './styles/hero.css';
+import './styles/scroll-reveals.css';
+import { initScrollReveals } from './interactions/scrollReveals.js';
 import { initProcess } from './interactions/process.js';
 import { initHeroMotion } from './interactions/heroMotion.js';
 
@@ -95,3 +97,5 @@ dialog.addEventListener('close', () => {
 
 initProcess();
 initHeroMotion();
+
+initScrollReveals();

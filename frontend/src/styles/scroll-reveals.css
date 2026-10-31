@@ -1,0 +1,11 @@
+/* Content stays fully visible without the initializer or Intersection Observer.
+   The initial treatment remains readable even if initialization is interrupted. */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-reveal { opacity: .85; transform: translate3d(0, 12px, 0); }
+  .scroll-reveal.is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: opacity 550ms cubic-bezier(.22, 1, .36, 1), transform 550ms cubic-bezier(.22, 1, .36, 1);
+  }
+  .scroll-reveal.reveal-instant { opacity: 1; transform: none; transition: none; }
+}
