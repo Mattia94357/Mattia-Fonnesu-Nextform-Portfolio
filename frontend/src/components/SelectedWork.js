@@ -1,4 +1,4 @@
-import { arrow, label } from './icons.js';
+import { label } from './icons.js';
 import { ProjectCard } from './ProjectCard.js';
 import { caseStudies } from '../data/caseStudies.js';
 import joker from '../../assets/d43e5652-4e83-4d72-9dfc-ba38230015cf.png';
@@ -15,7 +15,7 @@ export function SelectedWork() {
   return `<section class="selected-work" id="work" aria-labelledby="work-title">
     <div class="work-heading">
       <div>${label('SELECTED WORK')}<h2 id="work-title">Latest <em>Work</em></h2></div>
-      <div class="work-intro"><p>A selection of recent websites, products and digital experiences. Thoughtfully built, creatively driven, made for what's next.</p><a class="button button-outline" href="#projects">VIEW ALL WORK ${arrow}</a></div>
+      <div class="work-intro"><p>A selection of recent websites, products and digital experiences. Thoughtfully built, creatively driven, made for what's next.</p></div>
     </div>
     <div class="project-grid" id="projects">${projects.map(ProjectCard).join('')}</div>
   </section>`;
