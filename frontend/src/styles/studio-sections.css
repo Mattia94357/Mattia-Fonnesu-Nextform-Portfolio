@@ -52,7 +52,18 @@
 /* Contact is editorial and transparent; all delivery remains explicit. */
 .contact-section .studio-intro h2 { font-size: clamp(42px, 4.8vw, 80px); line-height: 1.02; letter-spacing: -.045em; }
 .contact-section .studio-intro p { max-width: 32ch; font-size: clamp(17px, 1.6vw, 22px); line-height: 1.55; }
-.contact-email-panel { display: grid; gap: 24px; justify-items: start; align-content: start; min-width: 0; }
+.contact-email-panel { display: grid; gap: 32px; justify-items: start; align-content: start; min-width: 0; }
+.contact-email-option { display: grid; gap: 24px; justify-items: start; min-width: 0; max-width: 100%; }
+.contact-whatsapp { display: inline-grid; grid-template-columns: 24px minmax(0, 1fr) 14px; align-items: center; gap: 16px; min-height: 44px; max-width: 100%; padding: 8px 0; color: var(--text-detail); transition: color .25s ease; }
+.contact-whatsapp .contact-whatsapp-icon { width: 24px; height: 24px; }
+.contact-whatsapp-copy { display: grid; gap: 8px; min-width: 0; font-size: 16px; line-height: 1.5; }
+.contact-whatsapp-label { color: var(--text-primary); font-size: 10px; letter-spacing: .18em; line-height: 1.5; }
+.contact-whatsapp-arrow { display: flex; align-items: center; transition: transform .25s ease; }
+.contact-whatsapp-arrow svg { width: 14px; height: 14px; }
+.contact-whatsapp:hover, .contact-whatsapp:focus-visible { color: var(--accent); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .contact-whatsapp:hover .contact-whatsapp-arrow { transform: translate(2px, -2px); }
+}
 .contact-email { display: block; width: fit-content; max-width: 100%; min-height: 44px; padding: 4px 0 12px; border-bottom: 1px solid var(--line); font-size: clamp(18px, 2vw, 28px); line-height: 1.4; letter-spacing: -.02em; overflow-wrap: anywhere; }
 .contact-email:hover { color: var(--accent); }
 .contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; }

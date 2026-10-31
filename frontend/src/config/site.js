@@ -4,8 +4,9 @@ export const siteConfig = {
   contact: {
     email: 'nextformdigital@gmail.com',
     emailEnabled: true,
-    whatsappNumber: '+1 202-555-0100',
-    whatsappEnabled: false,
+    whatsappNumber: '+66816205251',
+    whatsappEnabled: true,
+    whatsappInFooter: false,
   },
   socials: { instagram: '', facebook: '', linkedin: '' },
 };
@@ -21,6 +22,13 @@ export function enquiryMailto() {
   return email ? 'mailto:' + email : null;
 }
 
+// Canonical E.164 number stays in configuration; wa.me uses digits without '+'.
+export function enquiryWhatsApp() {
+  const { whatsappNumber, whatsappEnabled } = siteConfig.contact;
+  return whatsappEnabled && /^\+[1-9]\d{6,14}$/.test(whatsappNumber)
+    ? 'https://wa.me/' + whatsappNumber.slice(1) : null;
+}
+
 export function socialLinks() {
   const links = [];
   for (const [key, label] of [['instagram', 'Instagram'], ['facebook', 'Facebook'], ['linkedin', 'LinkedIn']]) {
@@ -29,10 +37,9 @@ export function socialLinks() {
       if (url.protocol === 'https:' && !/(^|\.)example\.(com|org|net)$/i.test(url.hostname)) links.push({ label, href: url.href });
     } catch { /* Unconfigured destinations stay hidden. */ }
   }
-  const { whatsappNumber, whatsappEnabled } = siteConfig.contact;
-  const digits = whatsappNumber.replace(/\D/g, '');
-  if (whatsappEnabled && /^[1-9]\d{6,14}$/.test(digits) && digits !== '12025550100') {
-    links.push({ label: 'WhatsApp', href: 'https://wa.me/' + digits });
+  const whatsapp = enquiryWhatsApp();
+  if (siteConfig.contact.whatsappInFooter && whatsapp) {
+    links.push({ label: 'WhatsApp', href: whatsapp });
   }
   return links;
 }
