@@ -7,6 +7,6 @@ export function Header() {
     <nav id="main-navigation" aria-label="Main navigation">
       <a href="#about">About</a><a href="#work">Work</a><a href="#process">Process</a><a href="#contact">Contact</a>
     </nav>
-    <span class="header-note"><span class="status-dot" aria-hidden="true"></span><span>BUILDING<br>WHAT'S NEXT.</span></span>
+    <span class="header-note"><span class="status-dot" aria-hidden="true"></span><span>DIGITAL EXPERIENCES.<br>REAL IMPACT.</span></span>
   </header>`;
 }

@@ -7,8 +7,8 @@ export function Hero() {
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="hero-copy">
       ${label('DIGITAL STUDIO')}<span class="label-rule" aria-hidden="true"></span>
-      <h1 class="hero-headline" id="hero-title"><span>Building</span> <span>what's next.</span></h1>
-      <p class="hero-description">Websites, products and digital experiences.</p>
+      <h1 class="hero-headline" id="hero-title"><span>Digital experiences.</span> <span>Real impact.</span></h1>
+      <p class="hero-description">Websites, digital products and experiences that elevate your business.</p>
       <div class="hero-actions">
         <a class="button button-light" href="#work">VIEW WORK ${arrow}</a>
         <a class="project-button" href="#contact"><span class="project-link-label">START A PROJECT</span> <span class="project-link-arrow" aria-hidden="true">→</span></a>

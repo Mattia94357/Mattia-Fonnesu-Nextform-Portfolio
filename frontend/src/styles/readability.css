@@ -1,0 +1,23 @@
+/* Target small homepage copy; leave branding, artwork UI and case-study dialogs intact. */
+main .eyebrow { font-size: 12px; letter-spacing: .2em; line-height: 1.5; }
+.header nav a { font-size: 14px; }
+.header .header-note { font-size: 12px; letter-spacing: .14em; line-height: 1.45; gap: 12px; text-shadow: 0 1px 3px #000; }
+.header .menu-toggle { font-size: 14px; }
+.hero .hero-actions .button, .hero .project-button { font-size: 14px; letter-spacing: .08em; }
+.about-services li { font-size: 12px; letter-spacing: .14em; }
+.project-card .project-number { font-size: 12px; line-height: 1.5; }
+.project-card .project-tags { font-size: 12px; letter-spacing: .08em; line-height: 1.5; flex-wrap: wrap; gap: 6px 12px; }
+.project-card .case-study-action { font-size: 14px; letter-spacing: .06em; }
+.project-card .project-status { font-size: 12px; letter-spacing: .1em; }
+.project-visit-link { font-size: 14px; letter-spacing: .1em; }
+.process-list .process-number { font-size: 12px; }
+.footer-top nav a, .footer-brand .footer-email { font-size: 14px; }
+.footer-bottom p { font-size: 12px; }
+.footer-bottom a { font-size: 14px; letter-spacing: .1em; }
+
+@media (max-width: 760px) {
+  .hero .hero-actions .button { padding-inline: 16px; gap: 12px; }
+  .hero .project-button { letter-spacing: .06em; }
+  .hero .hero-description, .work-intro p, .process-panel p { font-size: 16px; }
+  .work-intro p { line-height: 1.5; }
+}

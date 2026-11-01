@@ -7,8 +7,8 @@ export function About() {
     <div class="about-content">
       <h2 id="about-title">Ideas into <em>digital experiences.</em></h2>
       <div class="about-copy">
-        <p>NEXTFORM is an independent digital studio creating modern websites, digital products and smart solutions.</p>
-        <p>Founded by Mattia Fonnesu, an IT diploma graduate and developer with hands-on experience delivering real client projects. Combining modern web technologies with AI-assisted development, NEXTFORM focuses on thoughtful design, functionality and performance.</p>
+        <p>NEXTFORM is an independent digital studio helping businesses and independent professionals build a stronger online presence.</p>
+        <p>Through modern websites, thoughtful design and smart digital solutions, we turn ideas into professional experiences that build credibility, improve visibility and support real business goals.</p>
       </div>
     </div>
     <ul class="about-services" aria-label="Services">
